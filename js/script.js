@@ -1,22 +1,21 @@
 // querySelector = seletor de elementos
-const check = document.querySelector("check")
+const botaoTema = document.querySelector("#botaoTema")
 
 // addEventListener = adiciona um  evento
-check.addEventListener('click', mudaTema)
+botaoTema.addEventListener('click', mudaTema)
 
 function mudaTema(){
     let body = document.querySelector("body")
-    // let temaAtual = document.querySelector('#temaAtual')
+    let temaAtual = document.querySelector('#temaAtual')
     let imgLogo = document.querySelector('#imgLogo')
 
-    if(check.checked){
-        body.setAttribute('data-bs-theme','dark')
-        // temaAtual.innerHTML = "Dark"
-        imgLogo = setAttribute('src','images/logo/logoDark.svg')
+    if(botaoTema.checked){
+        body.setAttribute('data-bs-theme','dark')    
+        temaAtual.innerHTML = "dark"
+        imgLogo = setAttribute('src','../images/logo/logoDark.svg')
     }else{
         body.setAttribute('data-bs-theme','lhigt')
-        imgLogo = setAttribute('src','images/logo/logoWhite.svg')
-        // temaAtual.innerHTML = "lhigt"
-
+        temaAtual.innerHTML = "lhigt"
+        imgLogo = setAttribute('src','../images/logo/logoWhite.svg')
     }
 }
